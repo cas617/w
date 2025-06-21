@@ -1,25 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="UTF-8">
   <title>Redirecting…</title>
-  <!-- 預設導向到主要頁面 -->
-  <meta http-equiv="refresh" content="0; URL='https://chienan067.github.io/weather/'">
-</head>
-<body>
+  <!-- 使用 Meta Tag -->
+  <meta http-equiv="refresh" content="0; URL=https://chienan0617.github.io/weather_wise_web">
+  <!-- 也可使用 JavaScript 做備援導向 -->
   <script>
-    fetch('/weather/', { method: 'HEAD' })
-      .then(res => {
-        if (res.ok) {
-          window.location.replace('/weather/');
-        } else {
-          window.location.replace('/weather_wise_web/index.html');
-        }
-      })
-      .catch(_ => {
-        window.location.replace('/weather_wise_web/index.html');
-      });
+    window.location.href = "https://chienan0617.github.io/weather_wise_web";
   </script>
-  <p>CAStudio</p>
-</body>
+</head>
+<body></body>
 </html>
